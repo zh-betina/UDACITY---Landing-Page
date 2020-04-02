@@ -1,0 +1,100 @@
+@import url(text.css);
+
+html {
+
+  font-size: 16px;
+
+}
+
+body {
+
+  margin: 0 10em 0 10em;
+  background-color: #fff8a6;
+  display: grid; /*Desktop-first-friendly GRID layout*/
+  grid-template-areas:
+  "nav nav nav"
+  "header header header"
+  "section0 section0 section0"
+  "section1 section1 section1"
+  "section2 section2 section2"
+  "section3 section3 section3"
+  "footer footer footer";
+  grid-template-rows: auto 50% repeat(4 auto) 2em;
+
+}
+
+
+
+header {
+
+  margin-top: 0;
+  grid-area: header;
+  width: 100%;
+  height: 100vh;
+  background-image: url(pictures/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+nav {
+
+  grid-area: nav;
+  height: 3em;
+  background-color: #b0deff;
+  position: sticky;
+  top: 0;
+
+}
+
+
+#nav-list {
+
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+
+
+#section0 {
+
+  grid-area: section0;
+  height: 100vh;
+  background-color: #ffd19a;
+
+}
+
+#section1 {
+
+  grid-area: section1;
+  height: 100vh;
+  background-color: #ffc5a1;
+
+}
+
+#section2 {
+
+  grid-area: section2;
+  height: 100vh;
+  background-image: url(pictures/offer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#section3 {
+
+  grid-area: section3;
+  height: 100vh;
+  background-color: #ffd19a;
+
+}
+
+
+footer {
+
+  grid-area: footer;
+  background-color: #b0deff;
+}
