@@ -1,11 +1,19 @@
 buildNavbar();
-
-
+goUpBtn();
 /*----------------------------Active state navbar----------------------------*/
 
-window.addEventListener('scroll', function(event) {
+window.addEventListener('scroll', function() {
 
-      let scrollEvent;
+      const screenHeight = window.screen.height;
+      const scrollY = window.scrollY;
+
+      if (scrollY > screenHeight) {
+
+        document.getElementById('go-up').classList.remove('scroll-up');
+      } else {
+        document.getElementById('go-up').classList.add('scroll-up');
+      };
+
       /*Get nb of sections*/
       let sectionElementTag = document.getElementsByTagName('section');
           /*Loop over nb of sections*/
@@ -14,7 +22,7 @@ window.addEventListener('scroll', function(event) {
           /*Get every single element with id "section"+number*/
         const section = document.querySelector(`#section${i}`);
           /*Get every "section" position from the top of the document*/
-        const sectionPositionTop = section.offsetTop - 35;
+        const sectionPositionTop = section.offsetTop - 100;
           /*Get every "section" element height*/
         const sectionHeight = section.offsetHeight;
           /*Get the value of the scroll position*/
@@ -31,23 +39,56 @@ window.addEventListener('scroll', function(event) {
           the offsetTop  value of a section AND at the same time smaller
           from a section position value...*/
         if(scrollY >= sectionPositionTop && scrollY < sectionPosition){
-            /*Get every single "li" element and set an attribute to
+            /*Get every single "li" element and give it a class to
             indicate the user is scrolling over a given section*/
-          document.getElementsByTagName('li')[i].setAttribute('style', 'background-color: black');
+          document.getElementsByTagName('li')[i].classList.add('active-state');
         } else {
             /*If the condition is not fulfilled, the styling gets removed*/
-            document.getElementsByTagName('li')[i].removeAttribute('style', 'background-color: black');
+            document.getElementsByTagName('li')[i].classList.remove('active-state');
         }
       }
+})
 
-      return scrollEvent = console.log(event);
+scrolling();
+
+function goUpBtn() {
+document.getElementById('go-up').addEventListener('click', function(){
+
+  window.scrollTo({
+    left: 0,
+    top: 0,
+    behavior: 'smooth'
+  });
 });
+};
 
-/*---------------Disappearing navigation bar---------------------------------*/
+/*----------------------------Scroll to section-------------------------------*/
 
+function scrolling() {
 
+  let i = 0;
+
+  let sectionArray = [];
+  sectionArray = document.getElementsByTagName('section');
+  let liArray = [];
+  liArray = document.getElementsByTagName('li');
+
+  for (i = 0; sectionArray.length = liArray.length; i++) {
+
+    let positionY = sectionArray[i].offsetTop;
+    let positionX = 0;
+    liArray[i].addEventListener('click', function (){
+
+      window.scrollTo({
+         left: positionX,
+         top: positionY,
+         behavior: 'smooth'
+       });
+    });
+  }
+
+  };
 /*---------------Dynamic navigation bar content building----------------------*/
-
 function buildNavbar() {
 
     /*Get all "section" tag elements*/
