@@ -1,4 +1,45 @@
+h1{
+
+  color: #181810;
+}
 h2 {
 
   display: none;
+}
+
+h3 {
+
+  color: #181810;
+}
+
+#nav-list {
+
+  color: #e4e4e4;
+  font-size: 1.4em;
+}
+
+p {
+
+  font-size: 1em;
+  color: #e4e4e4;
+}
+
+.costs-txt {
+
+  color: white;
+}
+
+li:hover,
+.active-state {
+
+  font-weight: 900;
+  text-decoration: underline overline;
+}
+
+/*--------------Mobile-friendly text settings--------------*/
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+  p {
+    font-size: 1.5em;
+  }
 }
