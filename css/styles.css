@@ -8,93 +8,301 @@ html {
 
 body {
 
-  margin: 0 10em 0 10em;
-  background-color: #fff8a6;
+  margin: 0;
+  background-color: black;
   display: grid; /*Desktop-first-friendly GRID layout*/
   grid-template-areas:
-  "nav nav nav"
-  "header header header"
-  "section0 section0 section0"
-  "section1 section1 section1"
-  "section2 section2 section2"
-  "section3 section3 section3"
-  "footer footer footer";
-  grid-template-rows: auto 50% repeat(4 auto) 2em;
-
+  "nav header margin"
+  "nav section0 margin"
+  "nav section1 margin"
+  "nav section2 margin"
+  "nav section3 margin"
+  "nav footer margin";
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 5fr 1fr;
+  max-width: 100%;
 }
 
-
-
+/*---------------Header styling-------------------*/
 header {
 
-  margin-top: 0;
   grid-area: header;
-  width: 100%;
-  height: 100vh;
-  background-image: url(pictures/header.jpg);
+  margin-top: 0;
+  min-height: 100vh;
+  height: auto;
+  max-width: 100vw;
+  background-image: url(/home/betina/Documents/Atom/UDEMY/Project2/pictures/header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
+.header-box {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 11em;
+  margin-right: 11em;
+  background-color: rgb(255,255,255,0.1);
+}
+
+.header-box-top {
+
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
+  margin-top: 7em;
+}
+
+.header-box-bottom {
+
+  border-bottom-left-radius: 3em;
+  border-bottom-right-radius: 3em;
+}
+
+/*---------END of header styling------------------------------*/
+
+.margin {
+
+  grid-area: margin;
+  background: black;
+  width: auto;
+}
+
+
+.box {/*general styling for all boxes with text*/
+
+    background-color: rgb(255,255,255,0.1);
+    border-radius: 3em;
+}
+
+/*--------------Styling for navigation bar-----------*/
 nav {
 
+  position: fixed;
   grid-area: nav;
-  height: 3em;
-  background-color: #b0deff;
-  position: sticky;
-  top: 0;
-
 }
-
 
 #nav-list {
 
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+}
+
+
+.scroll-up {
+
+  visibility: hidden;
+}
+
+.fa-arrow-circle-up {
+
+  position: fixed;
+  grid-area: margin;
+  font-size: 3em;
+  margin: 10em 2em 0 2em;
+  color: white;
 
 }
 
 
-
+/*-----------SECTIONS---------------*/
+/*---------Section 0-> About -----------------------------------*/
 #section0 {
 
   grid-area: section0;
-  height: 100vh;
-  background-color: #ffd19a;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  height: auto;
+  max-width: 100vw;
+  background-color: #045757;
 
 }
+
+.section0-box {
+
+  padding: 1.5em;
+  margin-right: 1em;
+  text-align: justify;
+  align-self: center;
+
+}
+
+.about-pic {
+
+  height: 80vh;
+  width: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  border-radius: 3em;
+  float: left;
+}
+
+/*--------Section 1 -> Offer------------------------------*/
 
 #section1 {
 
   grid-area: section1;
-  height: 100vh;
-  background-color: #ffc5a1;
+  min-height: 100vh;
+  height: auto;
+  max-width: 100vw;
+  background-color: #062121;
 
 }
+
+.section1-box {
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 0.2em 3em 1em 3em;
+  margin: 0 4em 1em 4em;
+  text-align: center;
+}
+
+.box-of-pics {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2em 2em 2.3em 2em;
+}
+
+.pic-offer {
+
+  border-radius: 3em;
+  width: auto;
+  height: 50vh;
+  padding: 0.4em;
+
+}
+
+/*-------Section2 -> Pricing ---------------------*/
 
 #section2 {
 
   grid-area: section2;
-  height: 100vh;
-  background-image: url(pictures/offer.jpg);
+  min-height: 100vh;
+  height: auto;
+  max-width: 100vw;
+  background-image: url(/home/betina/Documents/Atom/UDEMY/Project2/pictures/pricing.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+
 }
+
+.section2-box {
+
+  padding: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  /*margin: 3em;*/
+  text-align: center;
+  color: black;
+  font-size: 1.2em;
+  background-color: rgb(0,0,0,0.5);
+
+}
+
+.section2-2nd-box {
+
+  padding: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: center;
+  background-color: rgb(0,0,0,0.5);
+  font-size: 1.3em;
+  color: white;
+  font-weight: 900;
+
+}
+
+/*---------Section3 -> Contact----------------------*/
 
 #section3 {
 
   grid-area: section3;
   height: 100vh;
-  background-color: #ffd19a;
+  max-width: 100vw;
+  background-color: #062121;
+}
 
+.contact-box {
+
+  background-image: url(/home/betina/Documets/Atom/UDEMY/Project2/contact.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
+/*-------------------Footer----------------------*/
 footer {
 
   grid-area: footer;
-  background-color: #b0deff;
+  max-width: 100vw;
+  background-color: #2a363b;
+}
+
+/*------------Mobile-friendly settings-------------------*/
+@media screen and (min-width: 0px) and (max-width: 768px) {
+
+  html {
+
+    font-size: 13px;
+    height: auto;
+    min-height: 100%;
+  }
+
+  body {
+
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "header"
+    "section0"
+    "section1"
+    "section2"
+    "section3"
+    "footer"
+    grid-template-rows: repeat(6 auto) 1fr;
+    grid-template-columns: repeat(1 1fr);
+    max-width: 100vw;
+    max-height: auto;
+  }
+
+  nav {
+
+    grid-area: nav;
+    background-color: rgb(0,0,0,0.5);
+    top: 0;
+    width: 100vw;
+    height: 4em;
+  }
+
+  header,
+  .section {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  
+  }
+
+  #nav-list {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
