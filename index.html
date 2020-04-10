@@ -2,10 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
     <title>Beauty workshops</title>
   </head>
   <body>
+
+    <div class="margin">
+      <span class="fas fa-arrow-circle-up scroll-up" id="go-up"></span>
+    </div>
 
     <nav>
       <ul id="nav-list">
@@ -13,30 +19,113 @@
     </nav>
 
     <header>
-      <h1>Hello</h1>
-
+        <div class="header-box header-box-top">
+        <h1>Your true colors.</h1>
+        <h1>Your style.</h1>
+        <h1>Your beauty.</h1>
+        </div>
+        <div class="header-box header-box-bottom">
+        <p>We help you discover your <em>self</em>.</p>
+        <p>We bring your inner beauty out and make it visible
+          to the world.</p>
+        </div>
     </header>
 
 
 
     <section id="section0" class="section">
       <h2>About</h2>
+      <div class="pic-box">
+        <img class="about-pic"
+             src="/home/betina/Documents/Atom/UDEMY/Project2/pictures/about.jpg"
+             alt="Picture of our team">
+      </div>
+      <div class="section0-box box">
+        <h3>Our team and our work</h3>
+        <p>...they are for us a big part of our life. Who are we?
+          We are simple women: somebody's daughters, mothers, wives,
+          girlfriends, neighbours. Businesswomen, artists, ingenieurs.</p>
+        <p>What we have in common is a strong belief, that the art of make-up
+          isn't vain, isn't there to cover up your imperfections</p>
+        <p>It's there to bring joy, colors and express our personalities</p>
+        <h3>We help you...</h3>
+        <p>to learn how to put together colors and various techniques for
+          best make-up result taking into account your personality, your
+          preferences, lifestyle.</p>
+      </div>
     </section>
 
     <section id="section1" class="section">
-      <h2>Product</h2>
+      <h2>Offer</h2>
+      <div class="box-of-pics">
+        <div class="pic">
+          <img class="pic-offer"
+               src="/home/betina/Documents/Atom/UDEMY/Project2/pictures/offer1.jpg"
+               alt="Picture of a woman wearing make-up">
+        </div>
+        <div class="pic">
+          <img class="pic-offer"
+               src="/home/betina/Documents/Atom/UDEMY/Project2/pictures/offer2.jpg"
+               alt="Picture of a woman wearing make-up">
+        </div>
+        <div class="pic">
+          <img class="pic-offer"
+               src="/home/betina/Documents/Atom/UDEMY/Project2/pictures/offer3.jpg"
+               alt="Picture of a woman wearing make-up">
+        </div>
+      </div>
+      <div class="section1-box box">
+        <h3>Group workshops, individual makeover/metamorphosis meetings and courses</h3>
+        <p>We work with groups (mostly companies) as well as individual clients
+          interested in self-development, enhancement of personal features.</p>
+        <p>Time, place, exact planning and pricing are adjusted in according
+          to the specific needs of our clients</p>
+
+      </div>
     </section>
 
     <section id="section2" class="section">
-      <h2>Offer</h2>
+      <h2>Pricing</h2>
+      <div class="section2-box box">
+        <h3>Individual on demand costs planing</h3>
+        <p class="costs-txt">We guarantee the best quality products along with the highest
+          qualification and experience of our make-up specialists and artists.
+          Our clients do not have the same needs and expectations, therefore
+          it is not possible to provide a general pricing list.</p>
+          </div>
+      <div class="section2-2nd-box box">
+        <p class="costs-txt">For more details we invite you to contact us:</p>
+        <p><span class="far fa-caret-square-down"></span></p>
+      </div>
     </section>
 
     <section id="section3" class="section">
       <h2>Contact</h2>
+      <div class="contact-box">
+        <form class="form-box" action="index.html" method="post">
+          <label for="name">Your name:</label>
+          <input type="text" name="name" placeholder="Write your name here.">
+
+          <label for="email">Your e-mail:</label>
+          <input type="email" name="email" placeholder="example@domain.com">
+
+          <label for="text">Your message:</label>
+          <textarea name="message" rows="8" cols="80" placeholder="Write your message here."></textarea>
+        </form>
+      </div>
     </section>
 
 
-    <footer><p>Pictures used in this project</p></footer>
+    <footer>
+      <p>Pictures used in this project</p>
+      <p><a href="https://www.pexels.com/photo/a-bunch-of-make-up-brushes-6148/">Pic1</a></p>
+      <p><a href="https://www.pexels.com/photo/round-black-wooden-table-surrounded-by-people-1884582/">Pic2</a></p>
+      <p><a href="https://www.pexels.com/photo/woman-wearing-red-floral-headdress-1625775/">Pic3</a></p>
+      <!--https://www.pexels.com/photo/woman-in-v-neck-trumpet-sleeved-dress-1115697/-->
+      <!--https://www.pexels.com/photo/photo-of-woman-wearing-white-shirt-2811089/-->
+      <!--https://www.pexels.com/photo/pink-lipstick-1213558/-->
+      <!--https://www.pexels.com/photo/blur-brushes-close-up-equipment-324657/-->
+    </footer>
 
     <script src="js/app.js" charset="utf-8"></script>
 
