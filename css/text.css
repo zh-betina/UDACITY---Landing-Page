@@ -1,4 +1,4 @@
-h1{
+h1 {
 
   color: #181810;
 }
@@ -9,6 +9,7 @@ h2 {
 
 h3 {
 
+  font-size: 1.8em;
   color: #181810;
 }
 
@@ -41,5 +42,11 @@ li:hover,
 
   p {
     font-size: 1.5em;
+  }
+
+  #nav-list {
+
+    color: #e4e4e4;
+    font-size: 1.2em;
   }
 }
