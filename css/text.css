@@ -1,6 +1,6 @@
 h1 {
 
-  color: #181810;
+  color: black;
 }
 h2 {
 
@@ -19,14 +19,15 @@ h3 {
   font-size: 1.4em;
 }
 
-p {
+p.one {
 
-  font-size: 1em;
-  color: #e4e4e4;
+  font-size: 1.3em;
+  color: black;
 }
 
-.costs-txt {
+p.two {
 
+  font-size: 1em;
   color: white;
 }
 
@@ -35,6 +36,26 @@ li:hover,
 
   font-weight: 900;
   text-decoration: underline overline;
+}
+
+a {
+
+  color: white;
+  font-size: 0.8em;
+}
+
+a:link,
+a:visited,
+a:active {
+
+  text-decoration: none;
+  font-style: oblique;
+}
+
+a:hover {
+
+  font-size: 0.9em;
+  color: grey;
 }
 
 /*--------------Mobile-friendly text settings--------------*/
