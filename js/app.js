@@ -1,9 +1,13 @@
 buildNavbar();
 goUpBtn();
-/*----------------------------Active state navbar----------------------------*/
+
+//----------------------------Active state navbar------------------------------
+    //---------------------and scroll-to-the-top Button on/off-----------------
+
 
 window.addEventListener('scroll', function() {
 
+//--------------Scroll-to-the-top button on/off the screen---------------------
       const screenHeight = window.screen.height;
       const scrollY = window.scrollY;
 
@@ -13,6 +17,9 @@ window.addEventListener('scroll', function() {
       } else {
         document.getElementById('go-up').classList.add('scroll-up');
       };
+//-----------------Scroll-to-the-top button on/off the screen END--------------
+
+//----------------Active sections linked to the SCROLL event-------------------
 
       /*Get nb of sections*/
       let sectionElementTag = document.getElementsByTagName('section');
@@ -47,37 +54,39 @@ window.addEventListener('scroll', function() {
             document.getElementsByTagName('li')[i].classList.remove('active-state');
         }
       }
-})
+});
 
-scrolling();
+scrollToSection();
+
+// -----------------------------Functions ------------------------------------
+
+    //----------------------Go-to-the-top Button CLICK event------------------
 
 function goUpBtn() {
-document.getElementById('go-up').addEventListener('click', function(){
 
-  window.scrollTo({
-    left: 0,
-    top: 0,
-    behavior: 'smooth'
+  document.getElementById('go-up').addEventListener('click', function(){
+
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
 };
 
-/*----------------------------Scroll to section-------------------------------*/
+  //--------------------------Scroll to section-------------------------------
 
-function scrolling() {
+function scrollToSection() {
 
-  let i = 0;
+  const sections = document.getElementsByTagName('section');
+  const liEl = document.getElementsByTagName('li');
 
-  let sectionArray = [];
-  sectionArray = document.getElementsByTagName('section');
-  let liArray = [];
-  liArray = document.getElementsByTagName('li');
+  for (let i = 0; i < liEl.length; i++) {
 
-  for (i = 0; sectionArray.length = liArray.length; i++) {
-
-    let positionY = sectionArray[i].offsetTop;
+    let positionY = sections[i].offsetTop;
     let positionX = 0;
-    liArray[i].addEventListener('click', function (){
+
+    liEl[i].addEventListener('click', function (){
 
       window.scrollTo({
          left: positionX,
@@ -85,28 +94,29 @@ function scrolling() {
          behavior: 'smooth'
        });
     });
-  }
-
   };
-/*---------------Dynamic navigation bar content building----------------------*/
+};
+
+  //---------------Dynamic navigation bar content building---------------------
+
 function buildNavbar() {
 
-    /*Get all "section" tag elements*/
+    //Get all "section" tag elements
   const sectionElementTag = document.getElementsByTagName('section');
-    /*Parent element of section*/
+    //Parent element of section
   const parentNavList = document.getElementById('nav-list');
 
-  for (let i = 0; sectionElementTag.length >= i+1; i++) {
+  for (let i = 0; sectionElementTag.length > i ; i++) {
 
-      /*Create a new "li" element*/
+      //reate a new "li" element
     const createLink = document.createElement('li');
-      /*Add a new "li" element to the navigation bar*/
+      //Add a new "li" element to the navigation bar
     const inNavBar = parentNavList.appendChild(createLink);
-      /*Get every single "section" element by ID name...*/
+      //Get every single "section" element by ID name...
     let getSection = document.getElementById(`section${i}`);
-      /*...and get its h2 text, that is to be used as navigation bar link text*/
+      //...and get its h2 text, that is to be used as navigation bar link text
     let sectionH2 = getSection.querySelector('h2').innerText;
-      /*Get every single "li" element*/
+      //Get every single "li" element
     let getLi = document.getElementsByTagName('li')[i];
       /*Assign innerHTML for every single "li" element in according
       to the corresponding section*/
