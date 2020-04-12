@@ -18,7 +18,7 @@ body {
   "nav section2 margin"
   "nav section3 margin"
   "nav footer margin";
-  grid-template-rows: auto;
+  grid-template-rows: repeat(5 1fr) 2.5em;
   grid-template-columns: 1fr 5fr 1fr;
   max-width: 100%;
 }
@@ -232,16 +232,68 @@ nav {
 #section3 {
 
   grid-area: section3;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   max-width: 100vw;
   background-color: #062121;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-box {
 
-  background-image: url(/home/betina/Documets/Atom/UDEMY/Project2/contact.jpg);
+  background-image: url(/home/betina/Documents/Atom/UDEMY/Project2/pictures/contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2em;
+  min-height: 35em;
+  min-width: 50vw;
+  max-width: 70vw;
+  padding: 2em 0 2em 0;
+  margin: 2em 0 2em 0;
+
+}
+
+form {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+
+  max-width: 30vw;
+  max-height: 30em;
+  border-radius: 1em;
+  background-color: rgb(255,255,255, 0.6);
+  font-size: 1.4em;
+  color: black;
+  padding: 0.3em;
+}
+input {
+
+  font-size: 1.4em;
+  background-color: rgb(255,255,255, 0.6);
+  font-size: 1.4em;
+  color: black;
+  padding: 0.3em;
+  border-radius: 1em;
+}
+
+label {
+
+  margin: 1em;
+  color: white;
+  font-weight: 900;
+  background-color: rgb(0,0,0,0.5);
+  font-size: 1.2em;
+}
+
+button {
+
+
 }
 
 
@@ -251,6 +303,10 @@ footer {
   grid-area: footer;
   max-width: 100vw;
   background-color: #2a363b;
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
 }
 
 /*------------Mobile-friendly settings-------------------*/
@@ -275,7 +331,7 @@ footer {
     "section3"
     "footer"
     grid-template-rows: repeat(6 auto) 1fr;
-    grid-template-columns: repeat(1 1fr);
+    grid-template-columns: 1fr;
     max-width: 100vw;
     max-height: auto;
   }
@@ -296,7 +352,29 @@ footer {
   flex-direction: column;
   justify-content: center;
   height: auto;
-  
+
+  }
+
+
+  #section0,
+  #section1 {
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .box-of-pics {
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .pic-offer {
+
+    height: 20em;
+    max-width: 100%;
+
   }
 
   #nav-list {
