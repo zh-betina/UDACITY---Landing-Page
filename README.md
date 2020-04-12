@@ -15,10 +15,10 @@ built with JavaScript.
 
 ### Suggested features (optional):
 
-* - [ ] Hide fixed navigation bar while not scrolling (**NOT realized**)
-* - [x] Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.(**Realized**)
-* - [x] Update/change the design/content. (**Realized**)
-* - [ ] Make sections collapsible. (**NOT realized**)
+* - [ ] Hide fixed navigation bar while not scrolling.
+* - [x] Add a scroll to top button on the page that’s only visible when the user scrolls below the fold of the page.
+* - [x] Update/change the design/content.(Both html as well as css files were created from scratch).
+* - [ ] Make sections collapsible.
 
 ## Dynamic Navigation
 
