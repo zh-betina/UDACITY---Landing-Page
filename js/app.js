@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
 
 //--------------Scroll-to-the-top button on/off the screen---------------------
       const screenHeight = window.screen.height;
-      const scrollY = window.scrollY;
+      const scrollY = window.scrollY - 200;
 
       if (scrollY > screenHeight) {
 
