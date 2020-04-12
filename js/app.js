@@ -8,8 +8,8 @@ goUpBtn();
 window.addEventListener('scroll', function() {
 
 //--------------Scroll-to-the-top button on/off the screen---------------------
-      const screenHeight = window.screen.height;
-      const scrollY = window.scrollY - 200;
+      const screenHeight = window.screen.height - 200;
+      const scrollY = window.scrollY;
 
       if (scrollY > screenHeight) {
 
