@@ -1,5 +1,7 @@
 # UDACITY---Landing-Page
 
+See the [Live Preview](https://zh-betina.github.io/UDACITY---Landing-Page/)
+Used: JavaScript, CSS(grid, flexbox), HTML
 
 ## About project:
 
